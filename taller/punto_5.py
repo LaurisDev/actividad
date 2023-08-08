@@ -15,8 +15,11 @@ class Circulo:
     def calcular_pertenencia(self):
         punto_x, punto_y = punto
         centro_x, centro_y = self.centro
-        distancia = math.sqrt((punto_x - centro_x) ** 2 + (punto_y - centro_y) ** 2)
-        return distancia <= self.radio
+        pertenece = math.sqrt((punto_x - centro_x) ** 2 + (punto_y - centro_y) ** 2)
+        if pertenece <= self.radio:
+            return ("Su punto pertenece al circulo")
+        else:
+            return ("no pertenece")
 
 
 if __name__ == "__main__":
@@ -24,4 +27,4 @@ if __name__ == "__main__":
     circulo = Circulo()
     print("AREA: ", circulo.calcular_area())
     print("PERIMETRO: ", circulo.calcular_perimetro())
-    print("DISTANCIA: ", circulo.calcular_pertenencia())
+    print(circulo.calcular_pertenencia())
