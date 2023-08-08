@@ -17,9 +17,9 @@ class Circulo:
         centro_x, centro_y = self.centro
         pertenece = math.sqrt((punto_x - centro_x) ** 2 + (punto_y - centro_y) ** 2)
         if pertenece <= self.radio:
-            return ("Su punto pertenece al circulo")
+            return "Su punto pertenece al circulo"
         else:
-            return ("no pertenece")
+            return "no pertenece"
 
 
 if __name__ == "__main__":
